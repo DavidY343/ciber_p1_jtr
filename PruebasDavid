@@ -1,0 +1,23 @@
+1.- Probamos con los nombres en español y jumbo para pruebas
+john --min-length=4 --wordlist=wordlists/languages/spanish.txt --format=Raw-MD5 --rule=jumbo .\g21_foromotos.txt
+40623g 0:00:01:48 DONE (2024-10-07 15:24)
+
+2.- El mejor intento de fuerza bruta
+	2.1.- Alternativa 5 min
+		john --min-length=4 --format=Raw-MD5 --incremental=ASCII --max-run-time=300 .\g21_foromotos.txt
+		12946g 0:00:05:01  42.99g/s 24248Kp/s 24248Kc/s 3245GC/s ajcct37..ajc697l
+	2.2.- Altenativa 10 min
+		john --min-length=4 --format=Raw-MD5 --incremental=ASCII --max-run-time=600 .\g21_foromotos.txt
+		16345g 0:00:10:00
+
+Al final para sacar todas las contraseñas con cada usuario hay que hacer esto:
+john --show --format=Raw-MD5 .\g21_foromotos.txt | Out-File -FilePath passwd_crack.txt -Encoding utf8
+Pequeño problemita porque las contraseñas en ese texto se guaradan mal con tildes preguntar al profesor
+
+
+Pruebas que no funcionaron:
+.- vamos a probar con lso nombres de los usuarios vergo
+	con el sh genWLfromforomotos.sh saco todos los usuarios y pruebo con esa wordlist (mala idea)
+.- estas mascaras son malisimas:
+john --format=Raw-MD5 --mask='?u?l?l?l?s'
+john --format=Raw-MD5 --mask='?u?l?l?l?l?s'

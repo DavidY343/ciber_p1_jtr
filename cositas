@@ -1,5 +1,0 @@
-$env:Path = $env:Path + ";C:\Users\tipir\Downloads\winX64_1_JtR\JtR\run\"
---------------------------------
-para crearse reglas propias debes crearte el archivo john-local.conf dentro del mismo directorio que john.conf
--------------------------------
-Hay que eliminar el pot
