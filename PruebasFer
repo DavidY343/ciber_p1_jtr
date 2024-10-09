@@ -1,18 +1,20 @@
-1.- 
+1.- La prueba basica de todas las posibles convinaciones en español
 	john --min-length=4 --wordlist=wordlists/languages/spanish.txt --format=Raw-MD5 --rule=jumbo .\g21_foromotos.txt
 	40623g 0:00:02:21 DONE
 
-2.-
+2.- La prueba de fuerza bruta desde que se creo el generar contraseñas de 5 caracteres aleatorias
 	john --min-length=5 --max-length=5 --incremental=../../Users/tipir/Downloads/winX64_1_JtR/JtR/run/lowernum.chr --format=Raw-MD5 .\g21_foromotos.txt
 	7287g 0:00:00:11 DONE
 
-3.-
-	john --min-length=6 --max-length=6 --incremental=../../Users/tipir/Downloads/winX64_1_JtR/JtR/run/lowernum.chr --format=Raw-MD5 .\g21_foromotos.txt
+4.-La prueba de fuerza bruta de 6 caracteres al tener con una mayuscula y un caracter especial
+	john --min-length=6 --max-length=6 --incremental=ASCII --max-run-time=600 --fork=6 --format=Raw-MD5 .\g21_foromotos.txt
+	16345g 0:00:10:00 DONE
 
+Al final para sacar todas las contraseñas con cada usuario hay que hacer esto:
+john --show --format=Raw-MD5 .\g21_foromotos.txt | Out-File -FilePath passwd_crack.txt -Encoding utf8
+Pequeño problemita porque las contraseñas en ese texto se guaradan mal con tildes preguntar al profesor
+Porque el fork me tarda lo mismo
 
-4.-
-	john --min-length=5 --wordlist=wordlists/passwords/hak5.txt  --rule=jumbo --format=Raw-MD5 .\g21_foromotos.txt
-
-5.-
-	john --min-length=4 --wordlist=wordlists/passwords/most_used_passwords.txt --format=Raw-MD5 --rule=jumbo g21_foromotos.txt
-	2783g 0:00:03:03
+5.- Vamos a probar a crackear meneate pero con la wordlist de las contraseñas usada en foromotos
+john --wordlist=used_passwd.txt --format=Raw-MD5 .\g21_meneate.txt
+Porque no me genera ninguna contraseñas

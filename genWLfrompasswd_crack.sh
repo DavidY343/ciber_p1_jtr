@@ -9,7 +9,7 @@ output_file="used_passwd.txt"
 > "$output_file"
 
 # Leer el archivo línea por línea
-while IFS=: read -r username paswwd; do
+while IFS=: read -r username passwd; do
     # Extraer solo el nombre de usuario (parte antes del ":")
     echo "$passwd" >> "$output_file"
 done < "$input_file"
