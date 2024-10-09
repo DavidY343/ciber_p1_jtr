@@ -12,3 +12,7 @@
 
 4.-
 	john --min-length=5 --wordlist=wordlists/passwords/hak5.txt  --rule=jumbo --format=Raw-MD5 .\g21_foromotos.txt
+
+5.-
+	john --min-length=4 --wordlist=wordlists/passwords/most_used_passwords.txt --format=Raw-MD5 --rule=jumbo g21_foromotos.txt
+	2783g 0:00:03:03
