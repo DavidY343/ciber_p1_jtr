@@ -1,0 +1,14 @@
+1.- 
+	john --min-length=4 --wordlist=wordlists/languages/spanish.txt --format=Raw-MD5 --rule=jumbo .\g21_foromotos.txt
+	40623g 0:00:02:21 DONE
+
+2.-
+	john --min-length=5 --max-length=5 --incremental=../../Users/tipir/Downloads/winX64_1_JtR/JtR/run/lowernum.chr --format=Raw-MD5 .\g21_foromotos.txt
+	7287g 0:00:00:11 DONE
+
+3.-
+	john --min-length=6 --max-length=6 --incremental=../../Users/tipir/Downloads/winX64_1_JtR/JtR/run/lowernum.chr --format=Raw-MD5 .\g21_foromotos.txt
+
+
+4.-
+	john --min-length=5 --wordlist=wordlists/passwords/hak5.txt  --rule=jumbo --format=Raw-MD5 .\g21_foromotos.txt
