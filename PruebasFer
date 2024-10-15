@@ -1,5 +1,5 @@
 1.- La prueba basica de todas las posibles convinaciones en español
-	john --min-length=4 --wordlist=wordlists/languages/spanish.txt --format=Raw-MD5 --rule=jumbo .\g21_foromotos.txt
+	john --min-length=4 --wordlist=wordlists/languages/spanish.txt --format=Raw-MD5 --rule=jumbo --fork=6 .\g21_foromotos.txt
 	40623g 0:00:02:21 DONE
 
 2.- La prueba de fuerza bruta desde que se creo el generar contraseñas de 5 caracteres aleatorias
@@ -11,10 +11,10 @@
 	16345g 0:00:10:00 DONE
 
 Al final para sacar todas las contraseñas con cada usuario hay que hacer esto:
-john --show --format=Raw-MD5 .\g21_foromotos.txt | Out-File -FilePath passwd_crack.txt -Encoding utf8
+john --show --format=Raw-MD5 .\g21_foromotos.txt | Tee-object -FilePath passwd_crack.txt -> abro notepadd++ y le cambio de utf-16 a utf-8
 Pequeño problemita porque las contraseñas en ese texto se guaradan mal con tildes preguntar al profesor
 Porque el fork me tarda lo mismo
 
 5.- Vamos a probar a crackear meneate pero con la wordlist de las contraseñas usada en foromotos
-john --wordlist=used_passwd.txt --format=Raw-MD5 .\g21_meneate.txt
+john --wordlist=used_passwd.txt --format=bcrypt .\g21_meneate.txt
 Porque no me genera ninguna contraseñas

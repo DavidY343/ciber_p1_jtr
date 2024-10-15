@@ -21,3 +21,9 @@ Pruebas que no funcionaron:
 .- estas mascaras son malisimas:
 john --format=Raw-MD5 --mask='?u?l?l?l?s'
 john --format=Raw-MD5 --mask='?u?l?l?l?l?s'
+
+
+De alguna manera la --rule=l33t tiene que servir probar antes
+De alguna manera la --rule=KoreLogicRules tiene que servir probar antes
+De alguna manera la --mask="algo" tiene que servir
+De alguna manera la  tiene que servir

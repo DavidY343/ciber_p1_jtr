@@ -1,0 +1,10 @@
+Explicaciones de word
+explicar porque has usado cada comando o john 
+contar y hacer graficas de contraseñas repetidas
+tmabien de longitud de contraseñas
+
+
+
+john el segundo es brcrypt de 12 rondas con un salt de sha1
+john usa tablas rainbow y entonces como tiene un salta raro en cada contraseña de meneate es muchisimo mas costoso
+entonces usar hilo en python que es ThreadPoolExecutor
