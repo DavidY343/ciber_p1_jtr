@@ -1,0 +1,6 @@
+john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=jumbo --max-run-time=240 g21_foromotos.txt
+john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=l33t --max-run-time=60 g21_foromotos.txt
+john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --mask=?w?a?a --max-run-time=120 g21_foromotos.txt
+john --min-length=5 --max-length=5 --incremental=lowernum.chr --format=Raw-MD5 --max-run-time=60 g21_foromotos.txt
+john --min-length=6 --max-length=6 --incremental=lowernum.chr --format=Raw-MD5  --max-run-time=240 g21_foromotos.txt
+john --min-length=6 --max-length=6 --incremental --max-run-time=500 --fork=6 --format=Raw-MD5 g21_foromotos.txt

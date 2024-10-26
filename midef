@@ -1,0 +1,25 @@
+1.- 
+	john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=jumbo  g21_foromotos.txt
+	PRIMERA: 40623g 0:00:01:20 DONE
+2.- 
+	john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=l33t .\g21_foromotos.txt
+	354g 0:00:00:12 DONE 
+3.- 
+	john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --mask=?w?a?a .\g21_foromotos.txt
+	4115g 0:00:00:22 DONE
+
+4.- 
+	john --min-length=5 --max-length=5 --incremental=lowernum.chr --format=Raw-MD5 .\g21_foromotos.txt
+	7265g 0:00:00:07 DONE
+
+5.- 
+	john --min-length=6 --max-length=6 --incremental=lowernum.chr --format=Raw-MD5  .\g21_foromotos.txt
+	11604g 0:00:01:31 DONE
+
+Total cracked 63991
+Time 0:00:03:32
+6.- 
+	john --min-length=6 --max-length=6 --incremental --max-run-time=500 --fork=6 --format=Raw-MD5 .\g21_foromotos.txt
+	4406g 0:00:08:20 DONE
+total 68397
+	john --min-length=7 --max-length=7 --incremental=lowernum.chr --max-run-time=100 --format=Raw-MD5 .\g21_foromotos.txt
