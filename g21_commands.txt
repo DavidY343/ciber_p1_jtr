@@ -1,6 +1,6 @@
-200s:john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=jumbo --max-run-time=180 g21_foromotos.txt
-50s:john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=l33t --max-run-time=50 g21_foromotos.txt
-110s:john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --mask=?w?a?a --max-run-time=110 g21_foromotos.txt
-40s:john --min-length=5 --max-length=5 --incremental=lowernum.chr --format=Raw-MD5 --max-run-time=40 g21_foromotos.txt
-200s:john --min-length=6 --max-length=6 --incremental=lowernum.chr --format=Raw-MD5 --max-run-time=220 g21_foromotos.txt
-900s:john --min-length=6 --max-length=6 --incremental=custom.chr --max-run-time=900 --fork=8 --format=Raw-MD5 g21_foromotos.txt
+200s:john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=jumbo --max-run-time=200 g21_foromotos_entrada.txt
+50s:john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --rule=l33t --max-run-time=50 g21_foromotos_entrada.txt
+110s:john --min-length=4 --wordlist=spanish.txt --format=Raw-MD5 --mask=?w?a?a --max-run-time=110 g21_foromotos_entrada.txt
+40s:john --min-length=5 --max-length=5 --incremental=lowernum.chr --format=Raw-MD5 --max-run-time=40 g21_foromotos_entrada.txt
+200s:john --min-length=6 --max-length=6 --incremental=lowernum.chr --format=Raw-MD5 --max-run-time=200 g21_foromotos_entrada.txt
+900s:john --min-length=6 --max-length=6 --incremental=custom.chr --max-run-time=900 --fork=8 --format=Raw-MD5 g21_foromotos_entrada.txt

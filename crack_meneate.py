@@ -38,8 +38,8 @@ def crack_bcrypt_with_known_password(cracked_passwords, user, bcrypt_hash):
 
 def main():
 	start_time = time.time()
-	cracked_passwords = load_cracked_passwords("cracked_passwd_foromotos.txt") 
-	user_hash_list = load_hash_file("g21_meneate.txt")
+	cracked_passwords = load_cracked_passwords("g21_foromotos.txt") 
+	user_hash_list = load_hash_file("g21_meneate_entrada.txt")
 	results = []
 
 	with ThreadPoolExecutor(max_workers=8) as executor:
@@ -51,7 +51,7 @@ def main():
 				results.append(f"{result[0]}:{result[1]}")
 
 	# Escribir los resultados en un archivo
-	with open("cracked_passwd_meneate.txt", 'w', encoding='utf-8') as output_file:
+	with open("g21_meneate.txt", 'w', encoding='utf-8') as output_file:
 		for line in results:
 			output_file.write(line + "\n")
 	

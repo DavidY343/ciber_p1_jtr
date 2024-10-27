@@ -80,7 +80,7 @@ def contrasenas_unicas(usuarios_contrasenas):
 	plt.show()
 
 def main():
-	file_path = 'cracked_passwd_foromotos.txt'
+	file_path = 'g21_foromotos.txt'
 	usuarios_contrasenas = leer_archivo(file_path)
 	duplicated_pairs(usuarios_contrasenas)
 	longitud_contrasenas(usuarios_contrasenas)
